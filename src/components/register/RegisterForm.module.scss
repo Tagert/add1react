@@ -1,0 +1,115 @@
+.register_card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.5s linear;
+  margin-top: 4rem;
+  z-index: 1;
+
+  .register_modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    min-width: 22rem;
+    padding: 1rem;
+    border: 0.1rem solid $gray-color-025;
+    border-radius: 0.4rem;
+    box-shadow: $dark-box-shadow $box-shadow-axis-top-left;
+
+    .active_login {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+
+      h4 {
+        font-size: 1rem;
+        font-weight: 500;
+        letter-spacing: 0.1rem;
+        color: $additional-text-color;
+      }
+
+      p {
+        font-size: 0.8rem;
+        font-weight: 500;
+        letter-spacing: 0.1rem;
+        color: $additional-text-color;
+      }
+
+      .input {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        .topInput {
+          margin-top: 1rem;
+        }
+
+        input {
+          width: 12rem;
+          padding: 0.3rem;
+          border: 0.1rem solid $background-color;
+          border-radius: 0.4rem;
+          box-shadow: $dark-box-shadow $box-shadow-axis-bottom-right;
+          outline: none;
+
+          &::placeholder {
+            padding-left: 0.2rem;
+            opacity: 0.5;
+          }
+
+          &[type="email"] {
+            padding-left: 0.8rem;
+          }
+
+          &[type="password"] {
+            padding-left: 0.8rem;
+          }
+        }
+
+        .username_info_error,
+        .password_info_error {
+          display: flex;
+          align-items: center;
+
+          p {
+            font-size: 0.8rem;
+          }
+        }
+      }
+    }
+
+    .btn_info {
+      position: relative;
+      flex-direction: column;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 0.8rem;
+
+      .registerBtn {
+        padding: 0.5rem 1.5rem;
+      }
+
+      .error {
+        height: 1rem;
+        font-size: 0.8rem;
+        color: brown;
+      }
+    }
+  }
+
+  .register {
+    font-weight: 500;
+    color: $primary-btn-color;
+  }
+}

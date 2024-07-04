@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  gap: 1.5rem;
+
+  a {
+    font-size: 1.25rem;
+    font-weight: 400;
+
+    @include xl {
+      display: none;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
